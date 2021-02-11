@@ -9,24 +9,62 @@
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/home.css">
-    <title>Document</title>
+    <title>Calculator</title>
 </head>
 
 <body>
+    <h1>Let's Calculate!</h1>
+    <section>
+        <label>
+            <input id="first-add-input">
+        </label>
+        +
+        <label>
+            <input id="second-add-input">
+        </label>
+        <button id="add-button">add</button>
+        =
+        <span id="sum-display">Sum</span>
+    </section>
+
+    <section>
+        <label>
+            <input id="first-subtract-input">
+        </label>
+        -
+        <label>
+            <input id="second-subtract-input">
+        </label>
+        <button id="subtract-button">subtract</button>
+        =
+        <span id="difference-display">Difference</span>
+    </section>
+
+    <section>
+        <label>
+            <input id="first-multiply-input">
+        </label>
+        *
+        <label>
+            <input id="second-multiply-input">
+        </label>
+        <button id="multiply-button">multiply</button>
+        =
+        <span id="product-display">Product</span>
+    </section>
+
+    <section>
     <label>
-        First Number:
-        <input id="first-add-input">
+        <input id="first-divide-input">
     </label>
-    +
+    /
     <label>
-        Second Number:
-        <input id="second-add-input">
+        <input id="second-divide-input">
     </label>
-    <button id="add-button">+</button>
+    <button id="divide-button">divide</button>
     =
-    <span>
-        <div id="sum-display">Result</div>
-    </span>
+    <span id="quotient-display">Quotient</span>
+    </section>
 
     <script type="module" src="app.js"></script>
 </body>

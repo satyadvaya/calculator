@@ -18,8 +18,35 @@ body {
     --gutter: 30px;
     --footer-height: 25px;
     
-    font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    font-family: 'Consolas', sans-serif;
+    background-color: lightslategray;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-left: 150px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+input {
+    text-align: center;
+}
+
+button {
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+span {
+    margin-left: 10px;
 }
 
 main {
@@ -31,18 +58,10 @@ main {
 }
 
 section {
-    background-color: var(--color5);
-    width: 1000px;
+    background-color: lightskyblue;
+    width: 530px;
     max-width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
-    margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
+    margin-left: 20px;
 }
 
 header {
@@ -60,7 +79,6 @@ footer {
     box-shadow: var(--shadow);
 }
 
-
 h2 {
     font-size: 1.8rem;
     font-weight: bold;
@@ -77,8 +95,6 @@ h2 {
 header img {
     height: var(--header-height);
 }
-
-
 
 content {
     width: 80%;
