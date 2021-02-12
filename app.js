@@ -6,55 +6,72 @@
 
 import { add, subtract, multiply, divide } from './calculations.js';
 
-const firstAddInput = document.getElementById('first-add-input');
-const secondAddInput = document.getElementById('second-add-input');
-const addButton = document.getElementById('add-button');
-const sumDisplay = document.getElementById('sum-display');
+function initOperator(input1Id, input2Id, buttonId, resultId, calculation) {
+    const input1 = document.getElementById(input1Id);
+    const input2 = document.getElementById(input2Id);
+    const button = document.getElementById(buttonId);
+    const display = document.getElementById(resultId);
 
-addButton.addEventListener('click', () => {
-    sumDisplay.textContent = add(Number(firstAddInput.value), Number(secondAddInput.value));
+    button.addEventListener('click', () => {
+        const result = calculation(Number(input1.value), Number(input2.value));
+        display.textContent = result;
+    });
+}
 
-    // const x = Number(firstAddInput.value);
-    // const y = Number(secondAddInput.value);
-    // const sum = add(x, y);
-    // sumDisplay.value = sum;
+initOperator('first-add-input', 'second-add-input', 'add-button', 'sum-display', add);
+initOperator('first-subtract-input', 'second-subtract-input', 'subtract-button', 'difference-display', subtract);
+initOperator('first-multiply-input', 'second-multiply-input', 'multiply-button', 'product-display', multiply);
+initOperator('first-divide-input', 'second-divide-input', 'divide-button', 'quotient-display', divide);
 
-    // const addTotal = Number(firstAddInput.value) + Number(secondAddInput.value);
-    // sumDisplay.textContent = addTotal;
-});
+// const firstAddInput = document.getElementById('first-add-input');
+// const secondAddInput = document.getElementById('second-add-input');
+// const addButton = document.getElementById('add-button');
+// const sumDisplay = document.getElementById('sum-display');
 
-const firstSubtractInput = document.getElementById('first-subtract-input');
-const secondSubtractInput = document.getElementById('second-subtract-input');
-const subtractButton = document.getElementById('subtract-button');
-const differenceDisplay = document.getElementById('difference-display');
+// addButton.addEventListener('click', () => {
+//     sumDisplay.textContent = add(Number(firstAddInput.value), Number(secondAddInput.value));
 
-subtractButton.addEventListener('click', () => {
-    differenceDisplay.textContent = subtract(Number(firstSubtractInput.value), Number(secondSubtractInput.value));
+//     // const x = Number(firstAddInput.value);
+//     // const y = Number(secondAddInput.value);
+//     // const sum = add(x, y);
+//     // sumDisplay.value = sum;
 
-    // const subtractTotal = Number(firstSubtractInput.value) - Number(secondSubtractInput.value);
-    // differenceDisplay.textContent = subtractTotal;
-});
+//     // const addTotal = Number(firstAddInput.value) + Number(secondAddInput.value);
+//     // sumDisplay.textContent = addTotal;
+// });
 
-const firstMultiplyInput = document.getElementById('first-multiply-input');
-const secondMultiplyInput = document.getElementById('second-multiply-input');
-const multiplyButton = document.getElementById('multiply-button');
-const productDisplay = document.getElementById('product-display');
+// const firstSubtractInput = document.getElementById('first-subtract-input');
+// const secondSubtractInput = document.getElementById('second-subtract-input');
+// const subtractButton = document.getElementById('subtract-button');
+// const differenceDisplay = document.getElementById('difference-display');
 
-multiplyButton.addEventListener('click', () => {
-    productDisplay.textContent = multiply(Number(firstMultiplyInput.value), Number(secondMultiplyInput.value));
+// subtractButton.addEventListener('click', () => {
+//     differenceDisplay.textContent = subtract(Number(firstSubtractInput.value), Number(secondSubtractInput.value));
 
-    // const multiplyTotal = Number(firstMultiplyInput.value) * Number(secondMultiplyInput.value);
-    // productDisplay.textContent = multiplyTotal;
-});
+//     // const subtractTotal = Number(firstSubtractInput.value) - Number(secondSubtractInput.value);
+//     // differenceDisplay.textContent = subtractTotal;
+// });
 
-const firstDivideInput = document.getElementById('first-divide-input');
-const secondDivideInput = document.getElementById('second-divide-input');
-const divideButton = document.getElementById('divide-button');
-const quotientDisplay = document.getElementById('quotient-display');
+// const firstMultiplyInput = document.getElementById('first-multiply-input');
+// const secondMultiplyInput = document.getElementById('second-multiply-input');
+// const multiplyButton = document.getElementById('multiply-button');
+// const productDisplay = document.getElementById('product-display');
 
-divideButton.addEventListener('click', () => {
-    quotientDisplay.textContent = divide(Number(firstDivideInput.value), Number(secondDivideInput.value));
+// multiplyButton.addEventListener('click', () => {
+//     productDisplay.textContent = multiply(Number(firstMultiplyInput.value), Number(secondMultiplyInput.value));
 
-    // const divideTotal = Number(firstDivideInput.value) / Number(secondDivideInput.value);
-    // quotientDisplay.textContent = divideTotal;
-});
+//     // const multiplyTotal = Number(firstMultiplyInput.value) * Number(secondMultiplyInput.value);
+//     // productDisplay.textContent = multiplyTotal;
+// });
+
+// const firstDivideInput = document.getElementById('first-divide-input');
+// const secondDivideInput = document.getElementById('second-divide-input');
+// const divideButton = document.getElementById('divide-button');
+// const quotientDisplay = document.getElementById('quotient-display');
+
+// divideButton.addEventListener('click', () => {
+//     quotientDisplay.textContent = divide(Number(firstDivideInput.value), Number(secondDivideInput.value));
+
+//     // const divideTotal = Number(firstDivideInput.value) / Number(secondDivideInput.value);
+//     // quotientDisplay.textContent = divideTotal;
+// });
